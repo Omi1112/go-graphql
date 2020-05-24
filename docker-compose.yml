@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000" #golang webserver用のポート
+    volumes:
+      - ".:/go/src/github.com/SeijiOmi/gqlgen-todos"
+    working_dir: "/go/src/github.com/SeijiOmi/gqlgen-todos"
+    tty: true
